@@ -4,7 +4,6 @@
 	"keywords": ["dom", "php dom"],
 	"homepage": "http://simplehtmldom.sourceforge.net/",
 	"type": "library",
-	"version": "1.5",
 	"require": {
 		"php": ">=5.2.4",
 		"ext-mbstring": "*"
