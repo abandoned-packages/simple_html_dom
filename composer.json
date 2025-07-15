@@ -5,7 +5,7 @@
 	"homepage": "http://simplehtmldom.sourceforge.net/",
 	"type": "library",
 	"require": {
-		"php": ">=5.2.4",
+		"php": ">=5.6",
 		"ext-mbstring": "*"
 	},
 	"authors": [
