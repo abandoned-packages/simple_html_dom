@@ -3,7 +3,8 @@
 declare(strict_types=1);
 
 use Rector\Config\RectorConfig;
-use Rector\Set\ValueObject\SetList;
+use Rector\Php54\Rector\Array_\LongArrayToShortArrayRector;
+use Rector\Set\ValueObject\LevelSetList;
 use Rector\ValueObject\PhpVersion;
 
 return RectorConfig::configure()
@@ -13,7 +14,10 @@ return RectorConfig::configure()
     ->withSkip([
         __DIR__ . '/vendor',
     ])
-    ->withSets([
-        SetList::PHP_73
+    ->withSkip([
+        LongArrayToShortArrayRector::class,
     ])
-    ->withPhpVersion(PhpVersion::PHP_73);
+    ->withSets([
+        LevelSetList::UP_TO_PHP_74,
+    ])
+    ->withPhpVersion(PhpVersion::PHP_56);
