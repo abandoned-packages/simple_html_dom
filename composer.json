@@ -18,5 +18,8 @@
 	"autoload": {
 		"classmap": ["simple_html_dom.php"],
 		"files": ["simple_html_dom.php"]
+	},
+	"require-dev": {
+		"rector/rector": "^2.1"
 	}
 }
