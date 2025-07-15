@@ -1,20 +1,15 @@
 {
 	"name": "shark/simple_html_dom",
-	"description": "Simple HTML DOM package.",
+	"description": "Fork of the abandoned https://github.com/samacs/simple_html_dom.",
 	"keywords": ["dom", "php dom"],
-	"homepage": "http://simplehtmldom.sourceforge.net/",
+	"homepage": "https://github.com/abandoned-packages/simple_html_dom",
 	"type": "library",
 	"require": {
 		"php": ">=5.6",
-		"ext-mbstring": "*"
+		"ext-mbstring": "*",
+		"ext-iconv": "*"
 	},
-	"authors": [
-		{
-			"name": "S.C. Chen",
-			"email": "me578022@gmail.com",
-			"homepage": "http://simplehtmldom.sourceforge.net/"
-		}
-	],
+	"license": "MIT",
 	"autoload": {
 		"classmap": ["simple_html_dom.php"],
 		"files": ["simple_html_dom.php"]
