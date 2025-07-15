@@ -10,12 +10,12 @@ You can install the library using Composer. It is a drop-in replacement for the 
 
 ```json
 {
-	"repositories": [
-		{
-			"type": "git",
-			"url": "https://github.com/abandoned-packages/simple_html_dom.git"
-		}
-	]
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/abandoned-packages/simple_html_dom.git"
+    }
+  ]
 }
 ```
 
