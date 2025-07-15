@@ -6,22 +6,14 @@ use Rector\Config\RectorConfig;
 use Rector\Set\ValueObject\SetList;
 use Rector\ValueObject\PhpVersion;
 
-return static function (RectorConfig $rectorConfig): void {
-    // Define paths to analyze
-    $rectorConfig->paths([
+return RectorConfig::configure()
+    ->withPaths([
         __DIR__ . '/simple_html_dom.php',
-    ]);
-
-    // Skip files/directories you don't want to analyze
-    $rectorConfig->skip([
+    ])
+    ->withSkip([
         __DIR__ . '/vendor',
-    ]);
-
-    // Use PHP 7.3 upgrade rules
-    $rectorConfig->sets([
+    ])
+    ->withSets([
         SetList::PHP_73
-    ]);
-
-    // Optional: Set PHP version for better analysis
-    $rectorConfig->phpVersion(PhpVersion::PHP_73);
-};
+    ])
+    ->withPhpVersion(PhpVersion::PHP_73);
