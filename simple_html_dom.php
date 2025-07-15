@@ -1608,7 +1608,7 @@ class simple_html_dom
     {
         if ($this->char===null) return '';
 
-        if (($pos = strpos($this->doc, $char, $this->pos))===false) {
+        if (($pos = strpos($this->doc, (string) $char, $this->pos))===false) {
             $ret = substr($this->doc, $this->pos, $this->size-$this->pos);
             $this->char = null;
             $this->pos = $this->size;
@@ -1629,7 +1629,7 @@ class simple_html_dom
         $start = $this->pos;
         while (1)
         {
-            if (($pos = strpos($this->doc, $char, $start))===false)
+            if (($pos = strpos($this->doc, (string) $char, $start))===false)
             {
                 $ret = substr($this->doc, $this->pos, $this->size-$this->pos);
                 $this->char = null;
@@ -1718,7 +1718,7 @@ class simple_html_dom
 
         foreach($this->noise as $noiseElement)
         {
-            if (strpos($noiseElement, $text)!==false)
+            if (strpos($noiseElement, (string) $text)!==false)
             {
                 return $noiseElement;
             }
